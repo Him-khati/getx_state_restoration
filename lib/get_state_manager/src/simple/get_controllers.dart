@@ -112,6 +112,9 @@ mixin FullLifeCycle on FullLifeCycleController {
       case AppLifecycleState.detached:
         onDetached();
         break;
+      case AppLifecycleState.hidden:
+        onHidden();
+        break;
     }
   }
 
@@ -119,4 +122,5 @@ mixin FullLifeCycle on FullLifeCycleController {
   void onPaused();
   void onInactive();
   void onDetached();
+  void onHidden();
 }

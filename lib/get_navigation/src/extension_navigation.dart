@@ -322,7 +322,7 @@ extension ExtensionDialog on GetInterface {
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
             shape: RoundedRectangleBorder(
                 side: BorderSide(
-                    color: buttonColor ?? theme.accentColor,
+                    color: buttonColor ?? theme.colorScheme.background,
                     width: 2,
                     style: BorderStyle.solid),
                 borderRadius: BorderRadius.circular(100)),
@@ -333,7 +333,7 @@ extension ExtensionDialog on GetInterface {
           },
           child: Text(
             textCancel ?? "Cancel",
-            style: TextStyle(color: cancelTextColor ?? theme.accentColor),
+            style: TextStyle(color: cancelTextColor ?? theme.colorScheme.onBackground),
           ),
         ));
       }
@@ -345,14 +345,14 @@ extension ExtensionDialog on GetInterface {
         actions.add(TextButton(
             style: TextButton.styleFrom(
               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-              backgroundColor: buttonColor ?? theme.accentColor,
+              backgroundColor: buttonColor ?? theme.colorScheme.onBackground,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(100)),
             ),
             child: Text(
               textConfirm ?? "Ok",
               style:
-                  TextStyle(color: confirmTextColor ?? theme.backgroundColor),
+                  TextStyle(color: confirmTextColor ?? theme.colorScheme.background),
             ),
             onPressed: () {
               onConfirm?.call();

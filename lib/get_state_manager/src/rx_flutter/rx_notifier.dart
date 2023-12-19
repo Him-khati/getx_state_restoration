@@ -73,8 +73,7 @@ mixin StateMixin<T> on ListNotifier {
   }
 }
 
-class Value<T> extends ListNotifier
-    with StateMixin<T>
+class Value<T> with ListNotifier, StateMixin<T>
     implements ValueListenable<T?> {
   Value(T val) {
     _value = val;

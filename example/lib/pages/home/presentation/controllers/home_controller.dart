@@ -72,4 +72,9 @@ class HomeController extends SuperController<CasesModel> {
   void onResumed() {
     print('onResumed called');
   }
+  
+  @override
+  void onHidden() {
+     print('onHidden called');
+  }
 }
